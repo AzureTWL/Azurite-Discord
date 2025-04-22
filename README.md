@@ -93,7 +93,7 @@ These items cannot be obtained through normal means, traded, or modified through
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests!
+Feel free to submit issues and pull requests!
 
 ## License
 
