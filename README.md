@@ -29,7 +29,7 @@ NOTE: THIS BOT ITSELF DOES NOT have a currency system. Please use another bot's 
        "channel_id": your_channel_id, 
        "target_channel_id": your_target_channel_id,
        "target_user_id": your_target_user_id,
-       "currency_name": "star tokens"
+       "currency_name": "currency here"
    }
    ```
 4. Edit the `ADMIN_USER_ID` in `azurite.py` to set your admin user ID:
