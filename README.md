@@ -32,12 +32,8 @@ NOTE: THIS BOT ITSELF DOES NOT have a currency system. Please use another bot's 
        "currency_name": "currency here"
    }
    ```
-4. Edit the `ADMIN_USER_ID` in `azurite.py` to set your admin user ID:
-   ```python
-   # Hardcoded admin user ID for security
-   self.ADMIN_USER_ID = 123456789  # Replace with your actual admin user ID
    ```
-5. Run the bot:
+4. Run the bot:
    ```bash
    python azurite.py
    ```
