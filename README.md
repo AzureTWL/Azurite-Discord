@@ -1,6 +1,6 @@
 # Azurite Bot
 
-A Discord bot gacha system, spesficially built with Danganronpa V3's item pool.
+A Discord bot gacha system, spesficially built with Danganronp V3's item pool.
 
 NOTE: THIS BOT ITSELF DOES NOT have a currency system. Please use another bot's currency system.
 
@@ -93,7 +93,7 @@ These items cannot be obtained through normal means, traded, or modified through
 
 ## Contributing
 
-Feel free to submit issues and enhancement requests!
+Feel free to submit issues and pull requests!
 
 ## License
 
