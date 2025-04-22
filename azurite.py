@@ -27,23 +27,38 @@ logger = logging.getLogger(__name__)
 # === SECURITY ===
 def _get_admin_id() -> int:
     """Get admin UID"""
-    encrypted = "QXp1cml0ZV8xMzE2NjAwNTU3MzgwODI5MTg0X0FkbWlu"  
-    checksum = "e214b45498c38639a59b61c0777c4b7e0c353b8d66d70952c8db11d5f5902677" 
+    encrypted = "QXp1cml0ZV8xMzE2NjAwNTU3MzgwODI5MTg0X0FkbWlu"  # Azurite_1316600557380829184_Admin
+    checksum = "69b622e60f012b698d6155874c013e9633cb2afa28497c0043a855109d3b12d2"  # SHA-256 of "1316600557380829184"
     
     try:
         # Decrypt the admin ID
         decoded = base64.b64decode(encrypted).decode('utf-8')
+        logger.info(f"Decoded string: {decoded}")  # Log the decoded string for debugging
+        
         parts = decoded.split('_')
-        if len(parts) != 3 or parts[0] != "Azurite" or parts[2] != "Admin":
+        if len(parts) != 3:
+            logger.error(f"Admin ID format verification failed: expected 3 parts, got {len(parts)}")
+            return 0
+            
+        if parts[0] != "Azurite":
+            logger.error(f"Admin ID format verification failed: expected 'Azurite', got '{parts[0]}'")
+            return 0
+            
+        if parts[2] != "Admin":
+            logger.error(f"Admin ID format verification failed: expected 'Admin', got '{parts[2]}'")
             return 0
         
         # Verify the checksum
         verify = hashlib.sha256(str(parts[1]).encode()).hexdigest()
         if verify != checksum:
+            logger.error(f"Admin ID checksum verification failed: expected {checksum}, got {verify}")
             return 0
             
-        return int(parts[1])
-    except:
+        admin_id = int(parts[1])
+        logger.info(f"Admin ID verified successfully: {admin_id}")
+        return admin_id
+    except Exception as e:
+        logger.error(f"Error verifying admin ID: {str(e)}")
         return 0
 
 # === BOT CONFIGURATION ===
