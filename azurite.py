@@ -77,7 +77,7 @@ class Config:
                 self.CHANNEL_ID = config['channel_id']
                 self.TARGET_CHANNEL_ID = config['target_channel_id']
                 self.TARGET_USER_ID = config['target_user_id']
-                self.CURRENCY_NAME = config.get('currency_name', 'star tokens')  # Default to 'star tokens' if not specified
+                self.CURRENCY_NAME = config.get('currency_name', 'money')
         except FileNotFoundError:
             logger.error("config.json not found. Please create it with your bot configuration.")
             sys.exit(1)
