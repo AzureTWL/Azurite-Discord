@@ -32,7 +32,6 @@ NOTE: THIS BOT ITSELF DOES NOT have a currency system. Please use another bot's 
        "currency_name": "currency here"
    }
    ```
-   ```
 4. Run the bot:
    ```bash
    python azurite.py
