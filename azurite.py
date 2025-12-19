@@ -27,8 +27,8 @@ logger = logging.getLogger(__name__)
 # === SECURITY ===
 def _get_admin_id() -> int:
     """Get admin UID"""
-    encrypted = "QXp1cml0ZV8xMzE2NjAwNTU3MzgwODI5MTg0X0FkbWlu"  # Azurite_1316600557380829184_Admin
-    checksum = "69b622e60f012b698d6155874c013e9633cb2afa28497c0043a855109d3b12d2"  # SHA-256 of "1316600557380829184"
+    encrypted = "QXp1cml0ZV8xMzE2NjAwNTU3MzgwODI5MTg0X0FkbWlu" 
+    checksum = "69b622e60f012b698d6155874c013e9633cb2afa28497c0043a855109d3b12d2"  
     
     try:
         # Decrypt the admin ID
